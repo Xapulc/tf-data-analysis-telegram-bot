@@ -12,7 +12,9 @@ logging.basicConfig(
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, 
-				   text='Я бот для поддержки курса "Анализ данных в индустрии".')
+				   text='Я бот для поддержки курса "Анализ данных в индустрии". '
+				  	+ 'Для выполнения ДЗ вам потребуется chat_id. ' +
+				        + f'Ваш chat_id. равен {update.effective_chat.id}.')
 
 async def get_chat(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, 
