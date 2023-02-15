@@ -1,3 +1,4 @@
+import os
 import logging
 
 from telegram import Update
@@ -18,7 +19,7 @@ async def get_chat(update: Update, context: ContextTypes.DEFAULT_TYPE):
 				   text=update.effective_chat.id)
 
 if __name__ == "__main__":
-    token = os.getenv(TELEGRAM_TOKEN)
+    token = os.getenv("TELEGRAM_TOKEN")
     application = ApplicationBuilder().token(token).build()
     
     application.add_handler(CommandHandler("start", start))
