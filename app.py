@@ -10,6 +10,10 @@ logging.basicConfig(
     level=logging.INFO
 )
 
+def get_variant(chat_id, salt, min_variant, max_variant):
+    return 
+
+
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, 
 				   text='Я бот для поддержки курса "Анализ данных в индустрии". '
@@ -18,6 +22,10 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 				   parse_mode="markdown")
 
 async def get_chat(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await context.bot.send_message(chat_id=update.effective_chat.id, 
+				   text=update.effective_chat.id)
+
+async def get_variant_stat(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, 
 				   text=update.effective_chat.id)
 
